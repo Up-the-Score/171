@@ -2,6 +2,10 @@
 
 This repository contains coursework and assignments for the ARTDM-171 Web Design class. Each assignment and practice project is organized into its own folder, with subfolders for mini websites and related resources.
 
+> [!NOTE]
+> Will be updating the filesystem & contents to reflect proper structure -- i.e. Challenges, Practices, etc. folders for a cleaner maintenance and navigation experience.
+> This should have been included in the assignments from the beginning...
+
 ## Project Structure
 
 - **challengeX/**: Challenge assignments (e.g., challenge1, challenge2, etc.)
