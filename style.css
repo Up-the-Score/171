@@ -113,6 +113,17 @@ nav ul ul li a:focus {
     padding-left: 56px;
 }
 
+/* profile image styling bbg */
+.profile-img {
+    max-width: 100%;
+    height: auto;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 20px auto;
+}
+
 .main-content {
     flex: 1;
     display: flex;
