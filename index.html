@@ -4,191 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <title>ARTDM-171 Assignments</title>
-    <!-- our stylesheet for this shitter -->
-    <style>
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: #f8f9fa;
-            margin: 0;
-            color: #222;
-            display: flex;
-            min-height: 100vh;
-        }
-
-        nav {
-            background: #e9ecef;
-            min-width: 240px;
-            max-width: 280px;
-            padding: 36px 0 36px 0;
-            box-shadow: 2px 0 8px rgba(0, 0, 0, 0.04);
-            border-right: 1px solid #ddd;
-            height: 100vh;
-            position: sticky;
-            top: 0;
-            display: flex;
-            flex-direction: column;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            width: 100%;
-        }
-
-        nav>ul>li {
-            margin: 0;
-            width: 100%;
-        }
-
-        nav a,
-        .collapsible {
-            display: block;
-            color: #0074d9;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 14px 32px;
-            border-radius: 0 24px 24px 0;
-            transition: background 0.2s, color 0.2s, padding 0.2s;
-            font-size: 1.08em;
-            margin-bottom: 2px;
-            background: none;
-            border: none;
-            text-align: left;
-            cursor: pointer;
-            width: 100%;
-        }
-
-        nav a:hover,
-        nav a:focus,
-        .collapsible:hover,
-        .collapsible.active {
-            background: #0074d9;
-            color: #fff;
-            outline: none;
-            padding-left: 40px;
-        }
-
-        nav ul ul.content {
-            background: #f4f6fa;
-            border-left: 3px solid #0074d9;
-            margin: 0 0 0 10px;
-            padding: 0;
-            border-radius: 0 0 0 12px;
-            display: none;
-        }
-
-        nav ul ul li a {
-            font-size: 0.98em;
-            padding: 10px 32px 10px 48px;
-            color: #444;
-            background: none;
-            border-radius: 0 16px 16px 0;
-        }
-
-        nav ul ul li a:hover,
-        nav ul ul li a:focus {
-            background: #e0e7ef;
-            color: #0074d9;
-            padding-left: 56px;
-        }
-
-        .main-content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-width: 0;
-        }
-
-        header {
-            text-align: center;
-            margin: 36px 0 18px 0;
-        }
-
-        h1 {
-            font-size: 2.3em;
-            color: #343a40;
-            letter-spacing: 1px;
-        }
-
-        section {
-            max-width: 700px;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-            padding: 28px 32px;
-            margin: 0 auto 32px auto;
-        }
-
-        footer {
-            text-align: center;
-            color: #888;
-            font-size: 0.95em;
-            margin: 40px 0 18px 0;
-        }
-
-        @media (max-width: 900px) {
-            body {
-                flex-direction: column;
-            }
-
-            nav {
-                flex-direction: row;
-                width: 100vw;
-                min-width: 0;
-                max-width: 100vw;
-                height: auto;
-                border-right: none;
-                border-bottom: 1px solid #ddd;
-                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-                position: static;
-                padding: 0;
-            }
-
-            nav ul {
-                display: flex;
-                flex-direction: row;
-                width: 100vw;
-                overflow-x: auto;
-            }
-
-            nav>ul>li {
-                display: block;
-                width: auto;
-            }
-
-            nav a,
-            .collapsible {
-                border-radius: 0;
-                padding: 12px 18px;
-                margin-bottom: 0;
-                font-size: 1em;
-            }
-
-            nav ul ul.content {
-                position: static;
-                border-left: none;
-                background: #f4f6fa;
-                border-radius: 0;
-                margin: 0;
-            }
-
-            nav ul ul li a {
-                padding: 10px 18px 10px 32px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <nav>
         <ul>
-    <!-- our homepage bbg -->
+            <!-- our homepage bbg -->
             <li><a href="index.html">Home</a></li>
-    <!-- challenge assignments -->
+            <!-- challenge assignments -->
             <li>
+                <h3>Challenges</h3>
                 <button class="collapsible">Challenge 1</button>
                 <ul class="content">
                     <li><a href="challenge1/index.html">index.html</a></li>
@@ -220,7 +46,8 @@
                     <li><a href="challenge5/index.html">index.html</a></li>
                 </ul>
             </li>
-    <!-- all the practices -->
+            <!-- all the practices -->
+            <h3>Practices</h3>
             <li>
                 <button class="collapsible">Practice 1</button>
                 <ul class="content">
@@ -257,18 +84,61 @@
             </li>
         </ul>
     </nav>
-<!-- main content shitters go here -->
+    <!-- main content shitters go here -->
     <div class="main-content">
         <header>
             <h1>ARTDM-171 Assignments</h1>
         </header>
+        <!-- a lil intro and contact info -->
         <section>
             <div>
                 <p>Basic navigational page to review ARTDM-171 assignments.</p>
+                <img src="img/profile_img.png" alt="Profile Image" class="profile-img"><br>
+                <sub>I'm opting out of including my name for this assignment.</sub><br>
+                <sub>Nor will I be including due dates in my nav panel as it defeats the purpose of my design.</sub>
+                <h3>
+                    redacted@email.com<br>
+                    ARTDM-171: Web Design<br>
+                    Spring 2026
+                </h3>
+            </div>
+        </section>
+        <!-- about section with the dramatics -->
+        <section>
+            <div>
+                <h2>About Me</h2>
+                <h3>Career Goals</h3>
+                <p>Definitely nothing that consists of outdated basic web design approaches, but to each their own.
+                </p>
+                <h3>My Web Design Knowledge</h3>
+                <p>
+                    My web design knowledge is neither primitive nor modernized.<br>
+                    Tis' simple what tis' is.<br>
+                    I can create basic layouts and apply simple styles.<br>
+                    I can design an entire website without touching bothering to touch CSS.<br>
+                    Some may call this sorcery.<br>
+                    But why subjugate myself to outdated approaches?<br>
+                    <b>Adapt.</b><br>
+                    <b>Improvise.</b><br>
+                    <b>Overcome.</b>
+                </p>
+                <h3>What I Hope to Learn</h3>
+                <p>
+                    I could only hope to spend my time spent during college level coursework doing things that put me in
+                    a position to grow and step into real-world applications with my best foot forward, and not walk out
+                    of a semester feeling like perhaps the curriculum has failed to stay in tact with the evolving
+                    landscape.<br>
+                    <br>
+                    One can only hope to not feel like the joke is on me after the one thing that can never be fully
+                    redeemed - precious time - has been spent on things no longer relevant to the horizon in which our
+                    beloved student body will be stepping into.<br>
+                    <br>
+                    <b>One can only hope.</b>
+                </p>
             </div>
         </section>
         <footer>
-        <!-- dare to be different.. sometimes -->
+            <!-- dare to be different.. sometimes -->
             <p>We do dope stuff sometimes.. but IDK how.</p>
             <a href="https://github.com/Up-the-Score/171" aria-label="ARTDM-171 GitHub Repository"
                 style="display:inline-block; background:#24292e; color:#fff; padding:10px 22px; border-radius:6px; font-weight:600; text-decoration:none; margin-top:18px; transition:background 0.2s;">
