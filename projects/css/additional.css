@@ -1,0 +1,383 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Navigation */
+.navbar {
+    background-color: #1e3c72;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    background-color: #2a5298;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+h1 {
+    color: #1e3c72;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+h2 {
+    color: #2a5298;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+h3 {
+    color: #2a5298;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 3rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.mission {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Sections */
+.intro,
+.trial {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-left: 4px solid #2a5298;
+}
+
+/* Category Cards */
+.categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.category-card,
+.facility-card,
+.exercise-card {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.category-card:hover,
+.facility-card:hover,
+.exercise-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.category-card h3,
+.facility-card h3,
+.exercise-card h3 {
+    color: #1e3c72;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: #2a5298;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+}
+
+.btn:hover {
+    background-color: #1e3c72;
+}
+
+/* Facilities */
+.facilities {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.facility-card ul {
+    margin: 1rem 0 0 1.5rem;
+}
+
+.facility-card ul li {
+    margin: 0.5rem 0;
+}
+
+/* Exercises */
+.exercises {
+    margin: 2rem 0;
+}
+
+.exercise-card {
+    margin: 1rem 0;
+}
+
+.resources {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+}
+
+.resources a {
+    color: #2a5298;
+    text-decoration: none;
+}
+
+.resources a:hover {
+    text-decoration: underline;
+}
+
+/* Class Schedule Table */
+.class-schedule {
+    margin: 2rem 0;
+    overflow-x: auto;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.schedule-table thead {
+    background-color: #1e3c72;
+    color: white;
+}
+
+.schedule-table th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: bold;
+}
+
+.schedule-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.schedule-table tbody tr:hover {
+    background-color: #f0f0f0;
+}
+
+/* Nutrition */
+.nutrition-section {
+    margin: 2rem 0;
+}
+
+.nutrition-section ul {
+    margin: 1rem 0 0 1.5rem;
+}
+
+.nutrition-section ul li {
+    margin: 0.5rem 0;
+}
+
+.meal-of-week {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.recipe {
+    margin-top: 1rem;
+}
+
+.ingredients,
+.instructions {
+    margin: 1rem 0;
+}
+
+.ingredients ul {
+    margin: 0.5rem 0 0 1.5rem;
+}
+
+.ingredients ul li {
+    margin: 0.5rem 0;
+}
+
+/* Contact */
+.intro {
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.info-box {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+}
+
+.info-box a {
+    color: #2a5298;
+    text-decoration: none;
+}
+
+.info-box a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Form */
+.contact-form {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2a5298;
+    box-shadow: 0 0 5px rgba(42, 82, 152, 0.3);
+}
+
+/* Location Map */
+.location-map {
+    margin: 2rem 0;
+}
+
+/* Footer */
+footer {
+    background-color: #1e3c72;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .schedule-table {
+        font-size: 0.9rem;
+    }
+
+    .schedule-table th,
+    .schedule-table td {
+        padding: 0.5rem;
+    }
+}
