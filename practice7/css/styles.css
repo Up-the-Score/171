@@ -49,6 +49,7 @@ header {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    z-index: 1000;
     text-align: center;
     color: #234b95;
     background-color: #9cb6e8;
