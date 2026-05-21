@@ -5,7 +5,19 @@ File Name: styles.css for challenge 8 start file
 */
 
 /* CSS Reset */
-body, header, nav, main, footer, img, h1, h3, ul, section, aside, figure, figcaption {
+body,
+header,
+nav,
+main,
+footer,
+img,
+h1,
+h3,
+ul,
+section,
+aside,
+figure,
+figcaption {
     margin: 0;
     padding: 0;
     border: 0;
@@ -23,7 +35,7 @@ img {
 
 /* Style rule for box sizing applies to all elements */
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /**************** Style rules for mobile viewport*****************/
@@ -104,33 +116,33 @@ main ul {
     margin: 10%;
 }
 
-aside{
-	text-align: center;
-	font-size: 1.5em;
-	font-weight: bold;
-	color:#234b95;
-	text-shadow:5px 5px 10px #4577d3;
+aside {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #234b95;
+    text-shadow: 5px 5px 10px #4577d3;
 }
 
-figure{
-	position:relative;
-	max-width:275px;
-	margin: 2% auto;
-	border:5px solid #234b95;
-	box-shadow:3px 3px 5px #4577d3;
+figure {
+    position: relative;
+    max-width: 275px;
+    margin: 2% auto;
+    border: 5px solid #234b95;
+    box-shadow: 3px 3px 5px #4577d3;
 }
 
-figcaption{
-	position:absolute;
-	bottom:0;
-	background-color:rgba(35, 75, 149,0.7);
-	color:#fff;
-	width:100%;
-	padding:5% 0;
-	text-align:center;
-	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
-	font-size:1.5em;
-	font-weight:bold;
+figcaption {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(35, 75, 149, 0.7);
+    color: #fff;
+    width: 100%;
+    padding: 5% 0;
+    text-align: center;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 .round {
@@ -138,7 +150,9 @@ figcaption{
 }
 
 
-#pamper, #full, #basic {
+#pamper,
+#full,
+#basic {
     margin: 0 2%;
 }
 
@@ -158,62 +172,70 @@ footer a {
 
 /* Media Query for Tablet Viewport */
 
- 
-    /* Tablet Viewport: Show tab-desk class, hide mobile class */
-    .tab-desk {}
 
-    .mobile {}
-    
-    /* Tablet Viewport: Style rules for nav area */
-    nav li {}
-    
-    nav li a {}
-    
-	.grid{}
-	aside{}
+/* Tablet Viewport: Show tab-desk class, hide mobile class */
+.tab-desk {}
+
+.mobile {}
+
+/* Tablet Viewport: Style rules for nav area */
+nav li {}
+
+nav li a {}
+
+.grid {}
+
+aside {}
 
 /* Media Query for Desktop Viewport */
-    
-    /* Desktop Viewport: Show tab-desk class, hide mobile class */
-    .tablet-desktop {}
 
-    .mobile {}
-    
-    /* Desktop Viewport:Style rules for header content */
-    header {}
-    
-    header h1 {}
+/* Desktop Viewport: Show tab-desk class, hide mobile class */
+.tablet-desktop {}
 
-    header h3 {}
+.mobile {}
 
-    /* Desktop Viewport: Style rules for nav area */
-    nav {}
-    
-    nav ul {}
+/* Desktop Viewport:Style rules for header content */
+header {}
 
-    nav li {}
+header h1 {}
 
-    nav li a {}
-    
-    nav li a:link {}
-    
-    nav li a:hover {}
-    
-    nav li a:active {}
-	
-	.grid{}
-	aside{}
-    
-    /* Desktop Viewport: Style rules for main content */
-    #pamper, #full, #basic {}
+header h3 {}
+
+/* Desktop Viewport: Style rules for nav area */
+nav {}
+
+nav ul {}
+
+nav li {}
+
+nav li a {}
+
+nav li a:link {}
+
+nav li a:hover {}
+
+nav li a:active {}
+
+.grid {}
+
+aside {}
+
+/* Desktop Viewport: Style rules for main content */
+#pamper,
+#full,
+#basic {}
 
 /* Media Query for Large Desktop Viewports */
-    
-    body {}
-    
-    #container {}
-        
-    main {}
-    
-    footer, footer a {}
-    
+
+body {}
+
+#container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+main {}
+
+footer,
+footer a {}
