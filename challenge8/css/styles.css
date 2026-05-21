@@ -23,14 +23,24 @@ figcaption {
     border: 0;
 }
 
+/* Google fonts additions */
+.cookie-regular {
+  font-family: "Cookie", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* Style rules for body and images */
 body {
     background-color: #9cb6e8;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
 }
 
 img {
     max-width: 100%;
     display: block;
+    height: auto;
 }
 
 /* Style rule for box sizing applies to all elements */
@@ -38,7 +48,7 @@ img {
     box-sizing: border-box;
 }
 
-/**************** Style rules for mobile viewport*****************/
+/**************** Style rules for mobile viewport *****************/
 
 /* Style rule to hide tab-desk class */
 .tab-desk {
@@ -47,12 +57,18 @@ img {
 
 /* Style rules for header content */
 header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     text-align: center;
     color: #234b95;
+    background-color: #9cb6e8;
+    padding: 2% 5%;
 }
 
 header h1 {
-    font-size: 3em;
+    font-size: 2.5em;
     padding-top: 2%;
     font-family: 'Cookie', cursive;
 }
@@ -67,6 +83,7 @@ header h3 {
 /* Style rules for navigation area */
 nav {
     background-color: #234b95;
+    padding: 0;
 }
 
 nav ul {
@@ -92,7 +109,14 @@ nav li a {
 
 /* Style rule for hero image */
 #hero {
-    clear: left;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#hero img {
+    width: 100%;
+    height: auto;
 }
 
 /* Style rules for main content */
@@ -149,6 +173,11 @@ figcaption {
     border-radius: 10px;
 }
 
+.action {
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #234b95;
+}
 
 #pamper,
 #full,
@@ -156,11 +185,22 @@ figcaption {
     margin: 0 2%;
 }
 
+/* Mobile grid layout */
+main.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2%;
+}
+
+main.grid aside {
+    grid-column: 1 / -1;
+    margin-bottom: 1em;
+}
+
 /* Style rules for footer content */
 footer {
     text-align: center;
     font-size: 0.85em;
-    clear: left;
     color: #234b95;
     font-weight: bold;
 }
@@ -170,72 +210,121 @@ footer a {
     text-decoration: none;
 }
 
-/* Media Query for Tablet Viewport */
-
-
-/* Tablet Viewport: Show tab-desk class, hide mobile class */
-.tab-desk {}
-
-.mobile {}
-
-/* Tablet Viewport: Style rules for nav area */
-nav li {}
-
-nav li a {}
-
-.grid {}
-
-aside {}
-
-/* Media Query for Desktop Viewport */
-
-/* Desktop Viewport: Show tab-desk class, hide mobile class */
-.tablet-desktop {}
-
-.mobile {}
-
-/* Desktop Viewport:Style rules for header content */
-header {}
-
-header h1 {}
-
-header h3 {}
-
-/* Desktop Viewport: Style rules for nav area */
-nav {}
-
-nav ul {}
-
-nav li {}
-
-nav li a {}
-
-nav li a:link {}
-
-nav li a:hover {}
-
-nav li a:active {}
-
-.grid {}
-
-aside {}
-
-/* Desktop Viewport: Style rules for main content */
-#pamper,
-#full,
-#basic {}
-
-/* Media Query for Large Desktop Viewports */
-
-body {}
-
-#container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0;
+/* Service page styles */
+.services-page h2 {
+    font-family: 'Cookie', cursive;
 }
 
-main {}
+.services-page img {
+    position: relative;
+    border: 3px solid #234b95;
+    border-radius: 8px;
+    margin: 1.5em 0;
+}
 
-footer,
-footer a {}
+.services-page footer {
+    background-color: #234b95;
+    position: sticky;
+    bottom: 0;
+    color: white;
+    padding: 2% 5%;
+}
+
+.services-page footer a {
+    color: white;
+}
+
+/* Media Query for Tablet Viewport */
+@media (min-width: 768px) {
+
+    .tab-desk {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    /* Tablet nav */
+    nav li {
+        display: inline-block;
+        border-top: none;
+        border-right: 1px solid #9cb6e8;
+    }
+
+    nav li:last-child {
+        border-right: none;
+    }
+
+    nav li a {
+        padding: 0.5em 1.5em;
+    }
+
+    /* Tablet grid layout - 2 columns */
+    main.grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2%;
+    }
+
+}
+
+/* Media Query for Desktop Viewport */
+@media (min-width: 1024px) {
+
+    .tablet-desktop {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    /* Desktop header */
+    header {
+        padding: 1% 5%;
+    }
+
+    header h1 {
+        font-size: 3.5em;
+        padding-top: 1%;
+    }
+
+    header h3 {
+        font-size: 1.5em;
+        padding-bottom: 1%;
+    }
+
+    /* Desktop nav - centered */
+    nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 0;
+    }
+
+    nav li {
+        display: inline-block;
+        border: none;
+        margin: 0;
+    }
+
+    nav li a {
+        padding: 0.5em 1.5em;
+        border: none;
+        transition: background-color 0.3s ease;
+    }
+
+    nav li a:hover {
+        background-color: #1a3a75;
+    }
+
+    /* Desktop grid layout - 4 columns */
+    main.grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2%;
+    }
+
+    main {
+        padding: 3%;
+    }
+
+}
