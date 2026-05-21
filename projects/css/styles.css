@@ -2,6 +2,18 @@
 Author: redacted for privacy purposes
 */
 
+/* Palette variables (updated) */
+:root {
+  --bg: #0F1314;           /* darkest background */
+  --surface: #171C1C;      /* panel / surface */
+  --primary: #2de740;      /* muted primary */
+  --accent: #69CD02;       /* primary accent (CTA) */
+  --highlight: #73FF0A;    /* bright highlight */
+  --text: #E6EFE9;         /* readable light text (neutral to complement palette) */
+  --muted-border: rgba(93,111,113,0.15);
+  --shadow-color: rgba(0,0,0,0.6);
+}
+
 /* CSS Reset */
 body,
 header,
@@ -18,22 +30,35 @@ ul {
 }
 
 /* Google fonts additions */
-.englebert-regular {
-    font-family: "Englebert", cursive;
-    font-weight: 400;
-    font-style: normal;
+.allan-regular {
+  font-family: "Allan", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.allan-bold {
+  font-family: "Allan", serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 /* Style rules for body and images */
+/* global page background: gradient with solid fallback */
 body {
-    background-color: #9cb6e8;
-    font-family: Arial, sans-serif;
-    min-height: 100vh;
+  background-color: var(--bg); /* fallback for old browsers */
+  background-image: linear-gradient(135deg, var(--surface) 0%, rgba(50,66,55,0.95) 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; /* optional: keeps gradient fixed while scrolling */
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  text-align: center;
+  min-height: 100vh;
 }
 
 img {
     position: relative;
-    border: 3px solid #234b95;
+    border: 3px solid var(--primary);
     border-radius: 8px;
     margin: 1.5em 0;
     max-width: 100%;
@@ -49,29 +74,53 @@ img {
 
 /* Style rules for header content */
 header {
-    position: -webkit-sticky;
     position: sticky;
+    top: 0;
     text-align: center;
-    color: #234b95;
-    background-color: #9cb6e8;
+    color: var(--primary);
+    background-color: var(--bg);
     padding: 2% 5%;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.logo {
+    height: 80px;
+    width: auto;
+    border: none;
+    margin: 0;
+    border-radius: 0;
 }
 
 header h1 {
     font-size: 2.5em;
-    padding-top: 2%;
-    font-family: 'Englebert', cursive;
+    padding-top: 0;
+    font-family: 'Allan', serif;
+    margin: 0;
 }
 
 header h3 {
     font-style: italic;
     font-size: 1.25em;
-    padding-bottom: 2%;
+    padding-bottom: 0;
 }
 
 /* Style rules for navigation area */
 nav {
-    background-color: #234b95;
+    background-color: var(--surface);
     padding: 0;
 }
 
@@ -87,8 +136,8 @@ nav li {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
     font-size: 1.2em;
-    border-top: 1px solid #7a9bcf;
-    display: block
+    border-top: 1px solid var(--muted-border);
+    display: block;
 }
 
 nav li:first-child {
@@ -97,16 +146,26 @@ nav li:first-child {
 
 nav li a {
     display: block;
-    color: white;
+    color: var(--text);
     text-align: center;
     text-decoration: none;
     padding: 0.8em 1em;
-    border-top: 1px solid #7a9bcf;
-    transition: background-color 0.3s ease;
+    border-top: 1px solid var(--muted-border);
+    transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 nav li a:hover {
-    background-color: #1a3a75;
+    background-color: rgba(105,205,2,0.12); /* subtle green hover */
+    color: var(--highlight);
+}
+
+/* Emphasis: bold, italic, highlighted */
+em {
+  font-style: italic;
+  font-weight: 700;
+  color: var(--highlight);
+  padding: 0 0.22em;
+  border-radius: 4px;
 }
 
 /* Style rule for hero image */
@@ -121,6 +180,7 @@ nav li a:hover {
     height: auto;
     display: block;
     object-fit: contain;
+    border-color: var(--muted-border);
 }
 
 /* Style rules for main content */
@@ -135,7 +195,7 @@ main {
 }
 
 main h2 {
-    color: #234b95;
+    color: var(--primary);
     font-size: 1.6em;
     margin: 1em 0 0.5em 0;
 }
@@ -146,10 +206,12 @@ main p {
     margin: 1em 0;
 }
 
+/* center aligned w inline block*/
 main ul {
-    list-style-type: square;
-    margin: 10%;
-    padding-left: 1.2em;
+  display: inline-block;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Category Cards Styling */
@@ -161,40 +223,49 @@ main ul {
 }
 
 .category-card {
-    background: linear-gradient(135deg, #ffffff 0%, #f0f4fa 100%);
-    border: 2px solid #234b95;
+    background: linear-gradient(135deg, var(--surface) 0%, rgba(50, 66, 55, 0.95) 100%);
+    border: 2px solid rgba(93,111,113,0.14);
     border-radius: 12px;
     padding: 2rem;
     text-align: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(35, 75, 149, 0.15);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    box-shadow: 0 4px 8px var(--shadow-color);
 }
 
 .category-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 16px rgba(35, 75, 149, 0.25);
-    border-color: #2a5298;
-    background: linear-gradient(135deg, #f0f4fa 0%, #ffffff 100%);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.7);
+    border-color: white;
+    background: linear-gradient(135deg, rgba(23,28,28,0.98) 0%, var(--surface) 100%);
 }
 
 .category-card h3 {
-    color: #234b95;
+    color: var(--highlight);
     font-size: 1.5em;
     margin-bottom: 1rem;
-    font-family: 'Englebert', cursive;
+    font-family: 'Allan', serif;
 }
 
 .category-card p {
     font-size: 1em;
     line-height: 1.5;
-    color: #333;
+    color: var(--text);
     margin-bottom: 1.5rem;
+}
+
+.category-card img {
+    width: 100%;
+    height: auto;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    object-fit: cover;
 }
 
 .btn {
     display: inline-block;
-    background-color: #234b95;
-    color: white;
+    background-color: var(--accent);
+    color: #0F1314;
     padding: 0.8em 1.5em;
     border: none;
     border-radius: 6px;
@@ -202,14 +273,14 @@ main ul {
     font-weight: bold;
     font-size: 1em;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
     margin: 0.5em 0;
 }
 
 .btn:hover {
-    background-color: #1a3a75;
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(35, 75, 149, 0.3);
+    background-color: var(--highlight);
+    transform: scale(1.03);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.6);
 }
 
 /* button styling within text - inline */
@@ -221,7 +292,7 @@ p .btn {
 
 /*contact page action
 .action {
-    color: #234b95;
+    color: var(--primary);
     font-weight: bold;
 }
 
@@ -241,18 +312,23 @@ p .btn {
 
 /* Style rules for footer content */
 footer {
-    text-align: center;
-    font-size: 0.85em;
-    color: #234b95;
-    font-weight: bold;
-    background-color: #9cb6e8;
-    padding: 3% 5%;
-    margin-top: auto;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+  text-align: center;
+  font-size: 0.85em;
+  color: var(--text);
+  font-weight: bold;
+  background-color: var(--bg);
+  padding: 3% 5%;
+  margin-top: auto;
 }
 
 footer a {
-    color: #234b95;
+    color: var(--primary);
     text-decoration: none;
+    position: -webkit-sticky;
 }
 
 footer a:hover {
@@ -273,7 +349,7 @@ footer a:hover {
 
     nav li a {
         border-top: none;
-        border-right: 1px solid #7a9bcf;
+        border-right: 1px solid var(--muted-border);
     }
 
     nav li:last-child a {
@@ -330,50 +406,17 @@ footer a:hover {
     }
 }
 
-/* adding Service page styles  */
-/* h2 styling */
-/*
-    custom Englebert font fam
-
-.services-page h2 {
-    font-family: 'Englebert', cursive;
-}
-
-/* img styling
-/*
-    blue border (3px solid #234b95)
-    rounded corners (8px border-radius)
-    relative positioning for layout control
-    vertical margins for breathing room
-
-.services-page img {
+/* adding About page styles  */
+.about-page img {
     position: relative;
-    border: 3px solid #234b95;
+    border: 3px solid var(--primary);
     border-radius: 8px;
     margin: 1.5em 0;
 }
 
-/* footer styling
-.services-page footer {
-    dark blue background (#234b95) for contrast
-    white text for visibility
-    sticky positioning to stay visible while scrolling
-    padding adjusted for proper spacing
+.exercise-card img {
+  width: 100%;
+  max-width: 450px;
+  height: 300px;
+  object-fit: cover;
 }
-
-
-.services-page footer {
-    background-color: #234b95;
-    font-family: Arial, sans-serif;
-    position: sticky;
-    bottom: 0;
-    color: white;
-    font-weight: bold;
-    padding: 2% 5%;
-    text-align: center;
-}
-
-.services-page footer a {
-    color: white;
-}
-*/
