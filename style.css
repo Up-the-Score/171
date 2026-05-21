@@ -284,6 +284,58 @@ footer {
     }
 }
 
+
+/* Categorial for nav card browsers */
+.category-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 1.25rem;
+}
+
+.category-card {
+  background: #f7f8fb;
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+  padding: 1.4rem;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.category-card h3 {
+  margin-bottom: 0.65rem;
+  color: #d90429;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+}
+
+.category-card p {
+  margin: 0 0 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.category-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-card li + li {
+  margin-top: 0.75rem;
+}
+
+.category-card a {
+  color: #0074d9;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.category-card a:hover,
+.category-card a:focus {
+  text-decoration: underline;
+}
+
+
+
 /* Desktop: 1024px and up */
 @media (min-width: 1024px) {
     h1 {

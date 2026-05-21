@@ -8,14 +8,14 @@
 </head>
 
 <script>
-document.querySelectorAll('.collapsible').forEach(btn => {
-  btn.addEventListener('click', () => {
-    btn.classList.toggle('active');
-    const content = btn.nextElementSibling;
-    if (!content || !content.classList.contains('content')) return;
-    content.classList.toggle('open');
-  });
-});
+    document.querySelectorAll('.collapsible').forEach(btn => {
+        btn.addEventListener('click', () => {
+            btn.classList.toggle('active');
+            const content = btn.nextElementSibling;
+            if (!content || !content.classList.contains('content')) return;
+            content.classList.toggle('open');
+        });
+    });
 </script>
 
 <body>
@@ -166,30 +166,81 @@ document.querySelectorAll('.collapsible').forEach(btn => {
                 </h3>
             </div>
         </section>
+        <!-- categories for cards nav-->
+        <section>
+            <h2>Browse by Category</h2>
+            <div class="category-grid">
+                <article class="category-card">
+                    <h3>Challenges</h3>
+                    <p>Jump to challenge pages and mini-sites.</p>
+                    <ul>
+                        <li><a href="challenge1/index.html">Challenge 1</a></li>
+                        <li><a href="challenge2/index.html">Challenge 2</a></li>
+                        <li><a href="challenge3/mini_website/index.html">Challenge 3</a></li>
+                        <li><a href="challenge4/index.html">Challenge 4</a></li>
+                        <li><a href="challenge5/index.html">Challenge 5</a></li>
+                    </ul>
+                </article>
+
+                <article class="category-card">
+                    <h3>Practices</h3>
+                    <p>Review practice assignments and mini-sites.</p>
+                    <ul>
+                        <li><a href="practice1/index.html">Practice 1</a></li>
+                        <li><a href="practice2/mini_website/index.html">Practice 2</a></li>
+                        <li><a href="practice3/index.html">Practice 3</a></li>
+                        <li><a href="practice4/index.html">Practice 4</a></li>
+                        <li><a href="practice5/mini_website/index.html">Practice 5</a></li>
+                    </ul>
+                </article>
+
+                <article class="category-card">
+                    <h3>Project</h3>
+                    <p>Open the full project site and supporting pages.</p>
+                    <ul>
+                        <li><a href="projects/index.html">Project Home</a></li>
+                        <li><a href="projects/about.html">About</a></li>
+                        <li><a href="projects/contact.html">Contact</a></li>
+                    </ul>
+                </article>
+            </div>
+        </section>
         <!-- about section -->
         <section>
             <div>
                 <h2>About Me</h2>
                 <h3>Career Goals</h3>
                 <p>
-                    I have a strong interest in pursuing a career in post production video editing and motion graphics design.<br><br>
-                    I also enjoy game development aspects, and anything related to terrain and environmental design.<br><br>
-                    My goal is to work in a dynamic and innovative environment where I can contribute the that skills I have developed while continuing to expand upon my abilities to create experiences for people that push the edge of what is possible.<br><br>
+                    I have a strong interest in pursuing a career in post production video editing and motion graphics
+                    design.<br><br>
+                    I also enjoy game development aspects, and anything related to terrain and environmental
+                    design.<br><br>
+                    My goal is to work in a dynamic and innovative environment where I can contribute the that skills I
+                    have developed while continuing to expand upon my abilities to create experiences for people that
+                    push the edge of what is possible.<br><br>
                 </p>
                 <h3>My Web Design Knowledge</h3>
                 <p>
-                    My web design knowledge dates back to learning HTML in the prime of MySpace, and I have been dabbling in it ever since.<br><br>
-                    These days I do prefer to utilize more modernized tools that are made readily available for us to use, such as Framer and Figma. Personally, I find these to be a bit more intuitive and user friendly due to the graphical interface, but I am also interested in learning the more technical aspects of web design as well.<br><br>
+                    My web design knowledge dates back to learning HTML in the prime of MySpace, and I have been
+                    dabbling in it ever since.<br><br>
+                    These days I do prefer to utilize more modernized tools that are made readily available for us to
+                    use, such as Framer and Figma. Personally, I find these to be a bit more intuitive and user friendly
+                    due to the graphical interface, but I am also interested in learning the more technical aspects of
+                    web design as well.<br><br>
                     <b>Adapt.</b><br>
                     <b>Improvise.</b><br>
                     <b>Overcome.</b>
                 </p>
                 <h3>What I Hope to Learn</h3>
                 <p>
-                    My interests have always favored the realms of visualizing map terrain data through a web experience.<br>
+                    My interests have always favored the realms of visualizing map terrain data through a web
+                    experience.<br>
                     Applications such as Leaflet have always been something that has fascinated me.<br>
-                    Now days we have apps such as Kepler.GL which is one of the things that I would love to dive into further in regards to web design/development.<br><br>
-                    If I had to pick absolutely one aspect to hone in for this, I'd say building a 3D experience for game terrains that allow the end user to visualize a game's world map in a way that provides 3D camera tools would be peak for me.<br>
+                    Now days we have apps such as Kepler.GL which is one of the things that I would love to dive into
+                    further in regards to web design/development.<br><br>
+                    If I had to pick absolutely one aspect to hone in for this, I'd say building a 3D experience for
+                    game terrains that allow the end user to visualize a game's world map in a way that provides 3D
+                    camera tools would be peak for me.<br>
                 </p>
             </div>
         </section>
