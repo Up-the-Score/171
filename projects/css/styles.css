@@ -12,6 +12,7 @@ Author: redacted for privacy purposes
   --text: #E6EFE9;         /* readable light text (neutral to complement palette) */
   --muted-border: rgba(93,111,113,0.15);
   --shadow-color: rgba(0,0,0,0.6);
+  --emphasis: rgb(255, 255, 255);
 }
 
 /* CSS Reset */
@@ -159,9 +160,22 @@ nav li a:hover {
     color: var(--highlight);
 }
 
+/*our regular hyperlinks*/
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+a:hover {
+  color: var(--highlight);
+  text-decoration: underline;
+}
+
 /* Emphasis: bold, italic, highlighted */
 em {
-  font-style: italic;
+  font-family: 'Allan', serif;
+  font-size: 1.1em;
   font-weight: 700;
   color: var(--highlight);
   padding: 0 0.22em;
