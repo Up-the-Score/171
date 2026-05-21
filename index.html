@@ -7,6 +7,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+<script>
+document.querySelectorAll('.collapsible').forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('active');
+    const content = btn.nextElementSibling;
+    if (!content || !content.classList.contains('content')) return;
+    content.classList.toggle('open');
+  });
+});
+</script>
+
 <body>
     <nav>
         <ul>
@@ -201,6 +212,7 @@
             </a>
         </footer>
     </div>
+    <!-- deprecated
     <script>
         // some lil collapsibles for ez access
         document.querySelectorAll('.collapsible').forEach(function (btn) {
@@ -218,7 +230,7 @@
         document.querySelectorAll('.content').forEach(function (ul) {
             ul.style.display = "none";
         });
-    </script>
+    </script> -->
 </body>
 
 </html>
