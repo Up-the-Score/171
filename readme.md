@@ -4,7 +4,6 @@ This repository contains coursework and assignments for the ARTDM-171 Web Design
 
 > [!NOTE]
 > Will be updating the filesystem & contents to reflect proper structure -- i.e. Challenges, Practices, etc. folders for a cleaner maintenance and navigation experience.
-> This should have been included in the assignments from the beginning...
 
 ## Project Structure
 
@@ -24,7 +23,7 @@ This repository contains coursework and assignments for the ARTDM-171 Web Design
 
 - Browse the repository tree to view folders and files.
 - Click on any HTML file to preview its code.
-- To view the site live, use GitHub Pages if enabled, or open the HTML files locally in your browser.
+- To view the site live, use [GitHub Pages](https://up-the-score.github.io/171/) if enabled, or open the HTML files locally in your browser.
 
 ---
 
