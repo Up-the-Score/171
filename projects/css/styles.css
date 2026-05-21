@@ -2,7 +2,7 @@
 Author: redacted for privacy purposes
 */
 
-/* Palette variables (updated) */
+/* Palette variables - AI Suggestion - included in AI Log submission */
 :root {
   --bg: #0F1314;           /* darkest background */
   --surface: #171C1C;      /* panel / surface */
@@ -43,22 +43,21 @@ ul {
   font-style: normal;
 }
 
-/* Style rules for body and images */
-/* global page background: gradient with solid fallback */
 body {
-  background-color: var(--bg); /* fallback for old browsers */
+  background-color: var(--bg);
   background-image: linear-gradient(135deg, var(--surface) 0%, rgba(50,66,55,0.95) 100%);
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed; /* optional: keeps gradient fixed while scrolling */
+  background-attachment: fixed;
   color: var(--text);
   font-family: Arial, sans-serif;
   text-align: center;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 img {
-    position: relative;
     border: 3px solid var(--primary);
     border-radius: 8px;
     margin: 1.5em 0;
@@ -66,77 +65,70 @@ img {
     height: auto;
 }
 
-/* Style rules for mobile viewport */
-
-/* Style rule to hide tab-desk class */
-.tab-desk {
-    display: none;
-}
-
-/* Style rules for header content */
 header {
     position: sticky;
     top: 0;
-    text-align: center;
-    color: var(--primary);
     background-color: var(--bg);
-    padding: 2% 5%;
+    padding: 1.5% 5%;
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    box-sizing: border-box;
+    z-index: 10;
     display: flex;
     justify-content: center;
-    z-index: 10;
+    box-sizing: border-box;
 }
 
 .header-content {
     display: flex;
     align-items: center;
-    gap: 1.25rem;
-    width: 100%;
     justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 1200px;
 }
 
+/* logo styling */
 .logo {
-    height: 80px;
+    height: clamp(50px, 8vw, 100px);
     width: auto;
     border: none;
     margin: 0;
     border-radius: 0;
 }
 
+/* Header style */
 header h1 {
-    font-size: 2.5em;
-    padding-top: 0;
+    font-size: clamp(1.8em, 5vw, 3.5em);
     font-family: 'Allan', serif;
     margin: 0;
+    padding: 0;
 }
 
 header h3 {
     font-style: italic;
     font-size: 1.25em;
-    padding-bottom: 0;
-}
-
-/* Style rules for navigation area */
-nav {
-    background-color: var(--surface);
     padding: 0;
 }
 
-nav ul {
+/* Nav styling entries */
+nav {
+    background-color: var(--surface);
+    padding: 0;
+    width: 100%;
+}
+
+nav ul,
+nav .nav-menu {
     list-style-type: none;
-    text-align: center;
     display: block;
-    gap: 0;
+    margin: 0;
+    padding: 0;
 }
 
 nav li {
     width: 100%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: clamp(1em, 2vw, 1.2em);
     border-top: 1px solid var(--muted-border);
     display: block;
 }
@@ -151,16 +143,20 @@ nav li a {
     text-align: center;
     text-decoration: none;
     padding: 0.8em 1em;
-    border-top: 1px solid var(--muted-border);
     transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 nav li a:hover {
-    background-color: rgba(105,205,2,0.12); /* subtle green hover */
+    background-color: rgba(105,205,2,0.12);
     color: var(--highlight);
 }
 
-/*our regular hyperlinks*/
+nav li a.active {
+    background-color: rgba(105,205,2,0.2);
+    color: var(--highlight);
+    border-bottom: 3px solid var(--highlight);
+}
+
 a {
   color: var(--accent);
   text-decoration: none;
@@ -172,7 +168,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Emphasis: bold, italic, highlighted */
+/* emphasis */
 em {
   font-family: 'Allan', serif;
   font-size: 1.1em;
@@ -182,7 +178,7 @@ em {
   border-radius: 4px;
 }
 
-/* Style rule for hero image */
+/* Hero img */
 #hero {
     width: 100%;
     margin: 0;
@@ -197,7 +193,7 @@ em {
     border-color: var(--muted-border);
 }
 
-/* Style rules for main content */
+/* Main content container */
 main {
     width: 100%;
     max-width: 1200px;
@@ -206,29 +202,41 @@ main {
     box-sizing: border-box;
     overflow: auto;
     font-family: sans-serif;
+    flex: 1;
+}
+
+main h1 {
+    font-size: clamp(1.8em, 5vw, 2.5em);
+    color: var(--primary);
+    margin: 1em 0 0.5em 0;
 }
 
 main h2 {
     color: var(--primary);
-    font-size: 1.6em;
+    font-size: clamp(1.4em, 4vw, 1.8em);
     margin: 1em 0 0.5em 0;
 }
 
+main h3 {
+    font-size: clamp(1.1em, 3vw, 1.5em);
+    color: var(--highlight);
+    margin: 0.8em 0 0.4em 0;
+}
+
 main p {
-    font-size: 1.2em;
+    font-size: clamp(1em, 2vw, 1.25em);
     line-height: 1.6;
     margin: 1em 0;
 }
 
-/* center aligned w inline block*/
+/* Centered list styling */
 main ul {
   display: inline-block;
   text-align: left;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 1em auto;
 }
 
-/* Category Cards Styling */
+/* cat cards styling */
 .categories {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -240,7 +248,7 @@ main ul {
     background: linear-gradient(135deg, var(--surface) 0%, rgba(50, 66, 55, 0.95) 100%);
     border: 2px solid rgba(93,111,113,0.14);
     border-radius: 12px;
-    padding: 2rem;
+    padding: clamp(1.5rem, 4vw, 3rem);
     text-align: center;
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
     box-shadow: 0 4px 8px var(--shadow-color);
@@ -255,13 +263,13 @@ main ul {
 
 .category-card h3 {
     color: var(--highlight);
-    font-size: 1.5em;
+    font-size: clamp(1.3em, 3vw, 1.8em);
     margin-bottom: 1rem;
     font-family: 'Allan', serif;
 }
 
 .category-card p {
-    font-size: 1em;
+    font-size: clamp(0.95em, 2vw, 1em);
     line-height: 1.5;
     color: var(--text);
     margin-bottom: 1.5rem;
@@ -276,16 +284,103 @@ main ul {
     object-fit: cover;
 }
 
+/* Facility cards ((About)) */
+.facilities {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.facility-card {
+    background: linear-gradient(135deg, var(--surface) 0%, rgba(50, 66, 55, 0.95) 100%);
+    border: 2px solid rgba(93,111,113,0.14);
+    border-radius: 12px;
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    text-align: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.facility-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.7);
+}
+
+.facility-card h2 {
+    color: var(--highlight);
+    font-size: clamp(1.2em, 3vw, 1.6em);
+    margin-bottom: 1rem;
+}
+
+.facility-card img {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    object-fit: cover;
+    border: 3px solid var(--primary);
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+/* Exercise cards ((About)) */
+.exercises > h2,
+.exercises > p:not(.resources) {
+    grid-column: 1 / -1;
+}
+
+.exercises .resources {
+    grid-column: 1 / -1;
+}
+
+.exercise-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.exercise-card {
+    background: linear-gradient(135deg, var(--surface) 0%, rgba(50, 66, 55, 0.95) 100%);
+    border: 2px solid rgba(93,111,113,0.14);
+    border-radius: 12px;
+    padding: clamp(1.5rem, 4vw, 2rem);
+    text-align: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.exercise-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.7);
+}
+
+.exercise-card h3 {
+    color: var(--highlight);
+    margin-bottom: 1rem;
+}
+
+.exercise-card img {
+  width: 100%;
+  max-width: 450px;
+  height: 300px;
+  object-fit: cover;
+  border: 3px solid var(--primary);
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+/* button style */
 .btn {
     display: inline-block;
     background-color: var(--accent);
     color: #0F1314;
-    padding: 0.8em 1.5em;
+    padding: clamp(0.6em, 2vw, 1em) clamp(1em, 3vw, 2em);
     border: none;
     border-radius: 6px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1em;
+    font-size: clamp(0.9em, 2vw, 1.1em);
     cursor: pointer;
     transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
     margin: 0.5em 0;
@@ -297,23 +392,12 @@ main ul {
     box-shadow: 0 6px 18px rgba(0,0,0,0.6);
 }
 
-/* button styling within text - inline */
 p .btn {
     margin: 0 0.25em;
-    padding: 0.6em 1.2em;
     font-size: 0.95em;
 }
 
-/*contact page action
-.action {
-    color: var(--primary);
-    font-weight: bold;
-}
-
-.round {
-    border-radius: 15px;
-}
-*/
+/* util classes */
 #pamper,
 #full,
 #basic {
@@ -324,14 +408,16 @@ p .btn {
     padding: 2% 0;
 }
 
-/* Style rules for footer content */
+.resources {
+    margin-top: 2em;
+    font-style: italic;
+}
+
+/* footer */
 footer {
-  position: sticky;
-  bottom: 0;
   width: 100%;
-  z-index: 10;
   text-align: center;
-  font-size: 0.85em;
+  font-size: clamp(0.75em, 1.5vw, 0.85em);
   color: var(--text);
   font-weight: bold;
   background-color: var(--bg);
@@ -339,23 +425,24 @@ footer {
   margin-top: auto;
 }
 
+footer p {
+    margin: 0.5em 0;
+}
+
 footer a {
     color: var(--primary);
     text-decoration: none;
-    position: -webkit-sticky;
 }
 
 footer a:hover {
     text-decoration: underline;
 }
 
-/* Tablet viewport styles */
+/* tablet viewport media queries (768px+) */
 @media (min-width: 768px) {
-    header h1 {
-        font-size: 3em;
+    header {
+        padding: 1.5% 5%;
     }
-
-    nav ul {}
 
     nav li {
         width: auto;
@@ -364,6 +451,7 @@ footer a:hover {
     nav li a {
         border-top: none;
         border-right: 1px solid var(--muted-border);
+        padding: 1em 1.5em;
     }
 
     nav li:last-child a {
@@ -374,63 +462,34 @@ footer a:hover {
         padding: 4%;
     }
 
-    .tab-desk {
-        display: block;
+    .category-card,
+    .facility-card,
+    .exercise-card {
+        padding: clamp(2rem, 5vw, 2.5rem);
     }
 
-    .category-card {
-        padding: 2.5rem;
-    }
-
-    .category-card h3 {
-        font-size: 1.7em;
+    .categories,
+    .facilities,
+    .exercises {
+        gap: 2.5rem;
     }
 }
 
-/* Desktop viewport styles */
+/* desktop viewport media queries (1024px+) */
 @media (min-width: 1024px) {
-    header h1 {
-        font-size: 3.5em;
-    }
-
     main {
         padding: 3%;
     }
 
-    main p {
-        font-size: 1.25em;
+    .categories,
+    .facilities,
+    .exercise-cards {
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    .categories {
-        gap: 2.5rem;
-    }
-
-    .category-card {
+    .category-card,
+    .facility-card,
+    .exercise-card {
         padding: 3rem;
     }
-
-    .category-card h3 {
-        font-size: 1.8em;
-        margin-bottom: 1.5rem;
-    }
-
-    .btn {
-        padding: 1em 2em;
-        font-size: 1.1em;
-    }
-}
-
-/* adding About page styles  */
-.about-page img {
-    position: relative;
-    border: 3px solid var(--primary);
-    border-radius: 8px;
-    margin: 1.5em 0;
-}
-
-.exercise-card img {
-  width: 100%;
-  max-width: 450px;
-  height: 300px;
-  object-fit: cover;
 }
