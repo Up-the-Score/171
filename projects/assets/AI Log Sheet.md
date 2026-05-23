@@ -85,12 +85,104 @@ Would you like me to explain specific CSS techniques for any of these improvemen
 
 
 
+## FOLLOW UP USER-PROMPT
+#### The common exercises section does not align or layout properly with the rest of the page for the desktop view, but looks fine in mobile/tablet. How can we fix this?
+
+## AI REASONING & LOGIC
+```The user is asking about the "Common Exercises" section layout issue on desktop. Let me look at the HTML and CSS.
+
+Looking at the about.html, the exercises section has:
+
+<section class="exercises">
+    <h2>Common Exercises</h2>
+    <p>The following are common exercises...</p>
+    
+    <div class="exercise-card">...</div>
+    <div class="exercise-card">...</div>
+    <div class="exercise-card">...</div>
+    
+    <p class="resources">For more information...</p>
+</section>
+And in the CSS, the .exercises is a grid:
+
+.exercises {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+The problem is that the <h2> and <p> elements inside .exercises are being treated as grid items. This causes the heading and introductory paragraph to be placed in grid cells, which breaks the layout flow.
+
+On mobile/tablet with auto-fit and minmax(250px, 1fr), the single column or narrow columns might visually work, but on desktop with 3 columns (as set in the media query), the <h2> and <p> elements will also take up grid cells.
+
+The fix is to either:
+
+Wrap the exercise cards in a separate div and apply the grid to that
+Use CSS Grid's column spanning to make the heading and intro paragraph span all columns
+Remove the grid layout from the section and apply it to a child container
+The easiest fix without changing HTML would be to use grid-column: 1 / -1; on the h2 and p elements within .exercises to make them span all columns.
+
+Let me provide this solution.
+
+The heading and paragraph need to span the full width of the grid instead of occupying individual cells. I can use grid-column: 1 / -1; on both the h2 and the .resources paragraph to stretch them across all columns, keeping the layout intact while the exercise cards remain in their grid positions.
+```
+
+## AI RESPONSE
+```
+The issue is that the .exercises section uses display: grid, which treats ALL direct children (including the <h2>, introductory <p>, and .resources paragraph) as grid items. On desktop, these get placed in individual grid cells rather than spanning the full width.
+
+The fix is to make those elements span all columns using grid-column: 1 / -1;. Add these rules to your stylesheet:
+
+/* ===== EXERCISE SECTION FIX ===== */
+/* Make section headers and intro text span full width in grid */
+.exercises > h2,
+.exercises > p:not(.resources) {
+    grid-column: 1 / -1;
+}
+
+.exercises .resources {
+    grid-column: 1 / -1;
+}
+
+Alternatively, if you want cleaner HTML structure, you could restructure the about.html to wrap only the cards:
+
+<section class="exercises">
+    <h2>Common Exercises</h2>
+    <p>The following are common exercises that we encourage our clients to do as part of their daily exercise routine.</p>
+    
+    <div class="exercise-cards">
+        <div class="exercise-card">
+            <h3>Burpee</h3>
+            ...
+        </div>
+        <!-- repeat for other cards -->
+    </div>
+    
+    <p class="resources">For more information about how to stay active, visit the <a href="..." target="_blank">U.S. Department of Health and Human Services</a>.</p>
+</section>
+
+Then apply the grid to .exercise-cards instead:
+.exercise-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+```
 
 
 
+-------
+# END OF CLAUDE HAIKU 4.5 UTILIZATION
+----
 
 
-## QUESTION #2
+# START OF QUESTION/EXPLANATION BASED PROMPTS WITH OTHER MODELS
+----
+
+
+## QUESTION #1
 #### Explain the benefits of using root palette variables for our stylesheet.
 
 ## AI RESPONSE
@@ -113,7 +205,7 @@ Theming support: root variables make light/dark mode or seasonal themes easier b
 The :root selector is the document’s top-level scope, so variables defined there are globally available to the page. That makes it a natural place for palette tokens such as primary, secondary, text, and background colors.
 
 
-## QUESTION #3
+## QUESTION #2
 #### Explain the differences between fr and px/pct in css
 
 
@@ -211,7 +303,7 @@ Use px sparingly for precision
 That’s the real-world approach.
 ```
 
-## QUESTION #4:
+## QUESTION #3:
 #### Explain the differences and benefits of utilizing `fr` fractions vs. `pct` percentages when working with CSS files.
 
 ## AI RESPONSE
