@@ -1,0 +1,138 @@
+
+items within [ ] are NOT part of the content.
+items with - denote list items
+
+
+
+
+[Home page]
+
+Welcome to Forward Fitness Club. Our mission is to help our clients meet their fitness and nutrition goals.
+
+If you have struggled with getting healthy and need the motivation and resources to make a healthy lifestyle change, contact us today. Our facility includes state-of-the-art equipment, convenient group training classes, and nutrition tips and information to keep you healthy.
+
+We provide a FREE, one-week membership to experience the benefits of our equipment and facility. This one-week trial gives you complete access to our equipment, training classes, and nutrition planning. Contact us today to start your free trial!
+
+[Category] Group Fitness
+[Category] Meal Plans
+[Category] Start Today
+
+
+
+
+
+[About Us page]
+
+Weights [Category] 
+Our facility includes a weight training area with several weight options. Build lean muscle with weights and improve your core with weight training.
+-Dumbbells
+-Kettle bells
+-Barbells
+
+Cardio [Category]
+Burn fat through cardio workouts. Experts recommend 150 minutes of cardio each week. We have several equipment choices for your workout.
+-Treadmills
+-Elliptical Machines
+-Exercise Bikes
+
+Personal Training [Category] 
+Our certified personal trainers work with you to help you obtain your fitness goals and track your progress. Personal training has many benefits.
+-Accountability
+-Personalized Program
+-Consistent Support and Motivation
+
+
+Common Exercises
+The following are common exercises that we encourage our clients to do as part of their daily exercise routine.
+
+Burpee [Category]
+Burpees are a great, full body exercise to increase your strength and endurance. Begin in a standing position, drop into a squat and extend your hands forward, kick your feet back and then forward again quickly, and then jump up from a squatted position.
+
+Plank [Category]
+Planks build your core strength. To perform a plank, get in a push up position and rest your forearms on the floor. Hold the position as long as you can.
+
+Mountain Climber [Category]
+Mountain climbers are a good cardio exercise. Place your hands on the floor in a push up position, then bring one knee up to your chest and then switch as quickly as you can (as though you are climbing a mountain).
+
+For more information about how to stay active, visit the U.S. Department of Health and Human Services[https://health.gov/our-work/nutrition-physical-activity/presidents-council].
+
+
+"This fictious website was created as an academic exercise for the Diablo Valley College course, ARTDM-171: Web Design I. In no way should this content be considered or used as a source of factual public information."
+
+[Classes page]
+
+[the following content is a table built using HTML]
+Class 		Days 		Times 		Instructor 	Room
+Cardio 		Mon, Wed, Fri 	6:00am, 6:00pm 	Schultz 	B
+Boot Camp 	Tue, Thu 	5:00am, 5:00pm 	Taylor 		B
+Spinning 	Tue, Thu 	6:00am, 6:00pm 	Roberts 	A
+Kickboxing 	Mon, Wed, Fri 	8:00am, 7:15pm 	Lawrence 	A
+Yoga 		Tue, Thu 	6:00am, 6:00pm 	Schultz 	B
+Zumba 		Mon, Wed, Fri 	7:00am, 6:00pm 	Roberts 	A
+
+
+
+
+
+
+[Nutrition page]
+
+Food for Thought [Category] 
+Good nutrition is a lifestyle, not a diet. It starts with a new way of thinking about food. Think of your body as a vehicle that uses food for fuel. Fill your tank with the right type of fuel.
+
+Do not approach your nutrition plan as a diet plan, but rather, a lifestyle change. If you make a permanent change, you will see big results. The key to success is a daily focus on your goal.
+
+Portion your meals and track your calories. There are many free mobile apps available to help track your activity level and calories.
+
+Control impulsive urges to buy junk food, and instead, allow yourself to one "cheat" meal a week.
+
+Nutrition Guide [Category]
+Use the following as a guideline:
+-Protein, such as eggs, chicken, and lean red meat
+-Vegetables, but avoid corn and peas
+-Fruit
+-Fat, such as olive oil, nuts, and seeds
+
+Limit the consumption of bread, pasta, white potatoes, and processed food. These foods are high in carbohydrates.
+
+When you shop for groceries, shop the outside aisles and buy organic when possible. Stock up on fresh vegetables, almond flour, and flax seed.
+
+Check out our Meal of the Week for new meal ideas.
+
+
+Meal of the Week [Category]
+Herb Roasted Chicken
+Ingredients:
+-boneless, skinless chicken breast (organic preferred)
+-1 tsp Herbes de Provence
+-1 tsp lemon juice
+-1 tsp olive oil
+-1 tsp sea salt
+-¼ tsp pepper
+
+Instructions:
+Combine all ingredients in a plastic bag and marinate for at least an hour. Preheat oven to 350 degrees. Bake chicken for 30-35 minutes or until juices run clear. Broil on high for two minutes or until brown. Serve with a fresh side salad.
+
+
+
+
+
+[Contact Us page]
+
+Ready to get started? Contact us today.
+
+(814) 555-9608
+
+Email us: forwardfitness@club.net
+
+You can also contact us via the following form:[create form with submit button]
+
+*name:_________________
+*email:________________
+*message:______________
+submit
+
+
+Visit us at: 1275 Channel Center Street, Boston, MA 02210
+
+[Google Map - 1275 Channel Center Street, Boston, MA 02210]
